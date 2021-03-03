@@ -1,0 +1,25 @@
+br/org/curitiba/ici/avaliacao/game/entities/GameResult.java
+ br.org.curitiba.ici.avaliacao.game.entities.GameResult
+br/org/curitiba/ici/avaliacao/splash/SplashScreen.java
+ br.org.curitiba.ici.avaliacao.splash.SplashScreen
+ br.org.curitiba.ici.avaliacao.splash.SplashScreen$1
+br/org/curitiba/ici/avaliacao/databinding/ActivityGameBinding.java
+ br.org.curitiba.ici.avaliacao.databinding.ActivityGameBinding
+br/org/curitiba/ici/avaliacao/login/LoginActivity.java
+ br.org.curitiba.ici.avaliacao.login.LoginActivity
+br/org/curitiba/ici/avaliacao/game/GameActivity.java
+ br.org.curitiba.ici.avaliacao.game.GameActivity
+ br.org.curitiba.ici.avaliacao.game.GameActivity$1
+br/org/curitiba/ici/avaliacao/databinding/ActivityLoginBinding.java
+ br.org.curitiba.ici.avaliacao.databinding.ActivityLoginBinding
+br/org/curitiba/ici/avaliacao/game/GameViewModel.java
+ br.org.curitiba.ici.avaliacao.game.GameViewModel
+ br.org.curitiba.ici.avaliacao.game.GameViewModel$1
+br/org/curitiba/ici/avaliacao/game/entities/Weapon.java
+ br.org.curitiba.ici.avaliacao.game.entities.Weapon
+br/org/curitiba/ici/avaliacao/util/Constants.java
+ br.org.curitiba.ici.avaliacao.util.Constants
+br/org/curitiba/ici/avaliacao/BuildConfig.java
+ br.org.curitiba.ici.avaliacao.BuildConfig
+br/org/curitiba/ici/avaliacao/DataBindingTriggerClass.java
+ br.org.curitiba.ici.avaliacao.DataBindingTriggerClass
