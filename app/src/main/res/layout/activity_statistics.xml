@@ -150,6 +150,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="TextView"
+            android:maxLength="5"
             android:fontFamily="@font/shojumaru"
             android:textColor="@android:color/black"
             app:layout_constraintBottom_toTopOf="@+id/wipeData"
