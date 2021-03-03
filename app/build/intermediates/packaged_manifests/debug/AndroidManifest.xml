@@ -35,6 +35,16 @@
         <activity
             android:name="br.org.curitiba.ici.avaliacao.game.GameActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="br.org.curitiba.ici.avaliacao.statistics.StatisticsActivity"
+            android:parentActivityName="br.org.curitiba.ici.avaliacao.game.GameActivity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:authorities="br.org.curitiba.ici.avaliacao.lifecycle-process"
+            android:exported="false"
+            android:multiprocess="true" />
     </application>
 
 </manifest>

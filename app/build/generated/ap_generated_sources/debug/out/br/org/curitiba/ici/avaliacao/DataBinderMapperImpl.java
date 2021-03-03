@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingComponent;
 import androidx.databinding.ViewDataBinding;
 import br.org.curitiba.ici.avaliacao.databinding.ActivityGameBindingImpl;
 import br.org.curitiba.ici.avaliacao.databinding.ActivityLoginBindingImpl;
+import br.org.curitiba.ici.avaliacao.databinding.ActivityStatisticsBindingImpl;
 import java.lang.IllegalArgumentException;
 import java.lang.Integer;
 import java.lang.Object;
@@ -23,11 +24,14 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_ACTIVITYLOGIN = 2;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(2);
+  private static final int LAYOUT_ACTIVITYSTATISTICS = 3;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(3);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(br.org.curitiba.ici.avaliacao.R.layout.activity_game, LAYOUT_ACTIVITYGAME);
     INTERNAL_LAYOUT_ID_LOOKUP.put(br.org.curitiba.ici.avaliacao.R.layout.activity_login, LAYOUT_ACTIVITYLOGIN);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(br.org.curitiba.ici.avaliacao.R.layout.activity_statistics, LAYOUT_ACTIVITYSTATISTICS);
   }
 
   @Override
@@ -50,6 +54,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new ActivityLoginBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for activity_login is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ACTIVITYSTATISTICS: {
+          if ("layout/activity_statistics_0".equals(tag)) {
+            return new ActivityStatisticsBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for activity_statistics is invalid. Received: " + tag);
         }
       }
     }
@@ -105,11 +115,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(2);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(3);
 
     static {
       sKeys.put("layout/activity_game_0", br.org.curitiba.ici.avaliacao.R.layout.activity_game);
       sKeys.put("layout/activity_login_0", br.org.curitiba.ici.avaliacao.R.layout.activity_login);
+      sKeys.put("layout/activity_statistics_0", br.org.curitiba.ici.avaliacao.R.layout.activity_statistics);
     }
   }
 }

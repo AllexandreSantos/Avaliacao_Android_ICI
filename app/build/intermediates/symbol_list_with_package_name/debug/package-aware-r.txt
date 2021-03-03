@@ -2056,6 +2056,7 @@ id startToEnd
 id startVertical
 id staticLayout
 id staticPostLayout
+id statistics_menu_option
 id stop
 id stretch
 id submenuarrow
@@ -2098,6 +2099,14 @@ id title_template
 id toggle
 id top
 id topPanel
+id totalDraws
+id totalDrawsNumber
+id totalGames
+id totalGamesNumber
+id totalLosses
+id totalLossesNumber
+id totalWins
+id totalWinsNumber
 id touch_outside
 id transitionToEnd
 id transitionToStart
@@ -2116,6 +2125,9 @@ id view_offset_helper
 id view_tree_view_model_store_owner
 id visible
 id vsTextView
+id winRatio
+id winRatioNumber
+id wipeData
 id withText
 id withinBounds
 id wrap
@@ -2184,6 +2196,7 @@ layout abc_tooltip
 layout activity_game
 layout activity_login
 layout activity_splash_screen
+layout activity_statistics
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2311,6 +2324,7 @@ string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string games_played
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string item_view_role_description
@@ -2385,8 +2399,14 @@ string rock
 string scissor
 string search_menu_title
 string select_weapon
+string statistics
 string status_bar_notification_info_overflow
+string total_draws
+string total_losses
+string total_wins
 string vs
+string win_ratio
+string wipe_data
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow

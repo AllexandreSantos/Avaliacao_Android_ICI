@@ -6,4 +6,9 @@
         android:visible="true"
         />
 
+    <item
+        android:id="@+id/statistics_menu_option"
+        android:title="@string/statistics"
+        android:visible="true"/>
+
 </menu>

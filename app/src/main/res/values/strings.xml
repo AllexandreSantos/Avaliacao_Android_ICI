@@ -17,4 +17,11 @@
     <string name="select_weapon">Selecione uma arma</string>
     <string name="ok">OK</string>
     <string name="result">Resultado:</string>
+    <string name="statistics">Estatísticas</string>
+    <string name="win_ratio">Porcentagem de Vitórias:</string>
+    <string name="total_draws">Empates totais:</string>
+    <string name="total_losses">Derrotas totais:</string>
+    <string name="total_wins">Vitórias totais:</string>
+    <string name="games_played">Partidas disputadas:</string>
+    <string name="wipe_data">Apagar dados</string>
 </resources>

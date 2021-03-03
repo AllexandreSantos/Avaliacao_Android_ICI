@@ -17,7 +17,6 @@
             android:theme="@style/FullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -26,9 +25,13 @@
             android:name=".login.LoginActivity"
             android:screenOrientation="portrait" />
 
-        <activity android:name=".game.GameActivity"
+        <activity
+            android:name=".game.GameActivity"
             android:screenOrientation="portrait" />
 
+        <activity android:name=".statistics.StatisticsActivity"
+            android:parentActivityName=".game.GameActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

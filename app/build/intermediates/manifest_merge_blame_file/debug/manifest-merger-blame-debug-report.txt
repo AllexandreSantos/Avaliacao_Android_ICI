@@ -11,7 +11,7 @@
 9-->C:\Users\allex\AndroidStudioProjects\Testes\Teste_Admissao_Android\Avaliacao_Android_ICI\app\src\main\AndroidManifest.xml
 10
 11    <application
-11-->C:\Users\allex\AndroidStudioProjects\Testes\Teste_Admissao_Android\Avaliacao_Android_ICI\app\src\main\AndroidManifest.xml:5:5-32:19
+11-->C:\Users\allex\AndroidStudioProjects\Testes\Teste_Admissao_Android\Avaliacao_Android_ICI\app\src\main\AndroidManifest.xml:5:5-35:19
 12        android:allowBackup="true"
 12-->C:\Users\allex\AndroidStudioProjects\Testes\Teste_Admissao_Android\Avaliacao_Android_ICI\app\src\main\AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -29,7 +29,7 @@
 20        android:theme="@style/AppTheme" >
 20-->C:\Users\allex\AndroidStudioProjects\Testes\Teste_Admissao_Android\Avaliacao_Android_ICI\app\src\main\AndroidManifest.xml:11:9-40
 21        <activity
-21-->C:\Users\allex\AndroidStudioProjects\Testes\Teste_Admissao_Android\Avaliacao_Android_ICI\app\src\main\AndroidManifest.xml:13:9-23:20
+21-->C:\Users\allex\AndroidStudioProjects\Testes\Teste_Admissao_Android\Avaliacao_Android_ICI\app\src\main\AndroidManifest.xml:13:9-22:20
 22            android:name="br.org.curitiba.ici.avaliacao.splash.SplashScreen"
 22-->C:\Users\allex\AndroidStudioProjects\Testes\Teste_Admissao_Android\Avaliacao_Android_ICI\app\src\main\AndroidManifest.xml:14:13-48
 23            android:noHistory="true"
@@ -39,28 +39,47 @@
 25            android:theme="@style/FullScreen" >
 25-->C:\Users\allex\AndroidStudioProjects\Testes\Teste_Admissao_Android\Avaliacao_Android_ICI\app\src\main\AndroidManifest.xml:17:13-46
 26            <intent-filter>
-26-->C:\Users\allex\AndroidStudioProjects\Testes\Teste_Admissao_Android\Avaliacao_Android_ICI\app\src\main\AndroidManifest.xml:18:13-22:29
+26-->C:\Users\allex\AndroidStudioProjects\Testes\Teste_Admissao_Android\Avaliacao_Android_ICI\app\src\main\AndroidManifest.xml:18:13-21:29
 27                <action android:name="android.intent.action.MAIN" />
 27-->C:\Users\allex\AndroidStudioProjects\Testes\Teste_Admissao_Android\Avaliacao_Android_ICI\app\src\main\AndroidManifest.xml:19:17-69
 27-->C:\Users\allex\AndroidStudioProjects\Testes\Teste_Admissao_Android\Avaliacao_Android_ICI\app\src\main\AndroidManifest.xml:19:25-66
 28
 29                <category android:name="android.intent.category.LAUNCHER" />
-29-->C:\Users\allex\AndroidStudioProjects\Testes\Teste_Admissao_Android\Avaliacao_Android_ICI\app\src\main\AndroidManifest.xml:21:17-77
-29-->C:\Users\allex\AndroidStudioProjects\Testes\Teste_Admissao_Android\Avaliacao_Android_ICI\app\src\main\AndroidManifest.xml:21:27-74
+29-->C:\Users\allex\AndroidStudioProjects\Testes\Teste_Admissao_Android\Avaliacao_Android_ICI\app\src\main\AndroidManifest.xml:20:17-77
+29-->C:\Users\allex\AndroidStudioProjects\Testes\Teste_Admissao_Android\Avaliacao_Android_ICI\app\src\main\AndroidManifest.xml:20:27-74
 30            </intent-filter>
 31        </activity>
 32        <activity
-32-->C:\Users\allex\AndroidStudioProjects\Testes\Teste_Admissao_Android\Avaliacao_Android_ICI\app\src\main\AndroidManifest.xml:25:9-27:52
+32-->C:\Users\allex\AndroidStudioProjects\Testes\Teste_Admissao_Android\Avaliacao_Android_ICI\app\src\main\AndroidManifest.xml:24:9-26:52
 33            android:name="br.org.curitiba.ici.avaliacao.login.LoginActivity"
-33-->C:\Users\allex\AndroidStudioProjects\Testes\Teste_Admissao_Android\Avaliacao_Android_ICI\app\src\main\AndroidManifest.xml:26:13-48
+33-->C:\Users\allex\AndroidStudioProjects\Testes\Teste_Admissao_Android\Avaliacao_Android_ICI\app\src\main\AndroidManifest.xml:25:13-48
 34            android:screenOrientation="portrait" />
-34-->C:\Users\allex\AndroidStudioProjects\Testes\Teste_Admissao_Android\Avaliacao_Android_ICI\app\src\main\AndroidManifest.xml:27:13-49
+34-->C:\Users\allex\AndroidStudioProjects\Testes\Teste_Admissao_Android\Avaliacao_Android_ICI\app\src\main\AndroidManifest.xml:26:13-49
 35        <activity
-35-->C:\Users\allex\AndroidStudioProjects\Testes\Teste_Admissao_Android\Avaliacao_Android_ICI\app\src\main\AndroidManifest.xml:29:9-30:52
+35-->C:\Users\allex\AndroidStudioProjects\Testes\Teste_Admissao_Android\Avaliacao_Android_ICI\app\src\main\AndroidManifest.xml:28:9-30:52
 36            android:name="br.org.curitiba.ici.avaliacao.game.GameActivity"
-36-->C:\Users\allex\AndroidStudioProjects\Testes\Teste_Admissao_Android\Avaliacao_Android_ICI\app\src\main\AndroidManifest.xml:29:19-52
+36-->C:\Users\allex\AndroidStudioProjects\Testes\Teste_Admissao_Android\Avaliacao_Android_ICI\app\src\main\AndroidManifest.xml:29:13-46
 37            android:screenOrientation="portrait" />
 37-->C:\Users\allex\AndroidStudioProjects\Testes\Teste_Admissao_Android\Avaliacao_Android_ICI\app\src\main\AndroidManifest.xml:30:13-49
-38    </application>
-39
-40</manifest>
+38        <activity
+38-->C:\Users\allex\AndroidStudioProjects\Testes\Teste_Admissao_Android\Avaliacao_Android_ICI\app\src\main\AndroidManifest.xml:32:9-34:51
+39            android:name="br.org.curitiba.ici.avaliacao.statistics.StatisticsActivity"
+39-->C:\Users\allex\AndroidStudioProjects\Testes\Teste_Admissao_Android\Avaliacao_Android_ICI\app\src\main\AndroidManifest.xml:32:19-64
+40            android:parentActivityName="br.org.curitiba.ici.avaliacao.game.GameActivity"
+40-->C:\Users\allex\AndroidStudioProjects\Testes\Teste_Admissao_Android\Avaliacao_Android_ICI\app\src\main\AndroidManifest.xml:33:13-60
+41            android:screenOrientation="portrait" />
+41-->C:\Users\allex\AndroidStudioProjects\Testes\Teste_Admissao_Android\Avaliacao_Android_ICI\app\src\main\AndroidManifest.xml:34:13-49
+42
+43        <provider
+43-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\allex\.gradle\caches\transforms-2\files-2.1\238c10d1ce435e53a2f343cecbbc5c20\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:23:9-27:43
+44            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+44-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\allex\.gradle\caches\transforms-2\files-2.1\238c10d1ce435e53a2f343cecbbc5c20\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:24:13-79
+45            android:authorities="br.org.curitiba.ici.avaliacao.lifecycle-process"
+45-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\allex\.gradle\caches\transforms-2\files-2.1\238c10d1ce435e53a2f343cecbbc5c20\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:25:13-69
+46            android:exported="false"
+46-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\allex\.gradle\caches\transforms-2\files-2.1\238c10d1ce435e53a2f343cecbbc5c20\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:26:13-37
+47            android:multiprocess="true" />
+47-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\allex\.gradle\caches\transforms-2\files-2.1\238c10d1ce435e53a2f343cecbbc5c20\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:27:13-40
+48    </application>
+49
+50</manifest>

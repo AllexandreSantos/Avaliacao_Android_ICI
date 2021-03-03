@@ -28,11 +28,11 @@ public class ActivityGameBindingImpl extends ActivityGameBinding implements br.o
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
+    private final android.view.View.OnClickListener mCallback5;
+    @Nullable
     private final android.view.View.OnClickListener mCallback3;
     @Nullable
     private final android.view.View.OnClickListener mCallback4;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback1;
     @Nullable
     private final android.view.View.OnClickListener mCallback2;
     // values
@@ -65,10 +65,10 @@ public class ActivityGameBindingImpl extends ActivityGameBinding implements br.o
         this.radioScissor.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback3 = new br.org.curitiba.ici.avaliacao.generated.callback.OnClickListener(this, 3);
-        mCallback4 = new br.org.curitiba.ici.avaliacao.generated.callback.OnClickListener(this, 4);
-        mCallback1 = new br.org.curitiba.ici.avaliacao.generated.callback.OnClickListener(this, 1);
-        mCallback2 = new br.org.curitiba.ici.avaliacao.generated.callback.OnClickListener(this, 2);
+        mCallback5 = new br.org.curitiba.ici.avaliacao.generated.callback.OnClickListener(this, 4);
+        mCallback3 = new br.org.curitiba.ici.avaliacao.generated.callback.OnClickListener(this, 2);
+        mCallback4 = new br.org.curitiba.ici.avaliacao.generated.callback.OnClickListener(this, 3);
+        mCallback2 = new br.org.curitiba.ici.avaliacao.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -130,35 +130,16 @@ public class ActivityGameBindingImpl extends ActivityGameBinding implements br.o
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.button.setOnClickListener(mCallback4);
-            this.radioPaper.setOnClickListener(mCallback2);
-            this.radioRock.setOnClickListener(mCallback1);
-            this.radioScissor.setOnClickListener(mCallback3);
+            this.button.setOnClickListener(mCallback5);
+            this.radioPaper.setOnClickListener(mCallback3);
+            this.radioRock.setOnClickListener(mCallback2);
+            this.radioScissor.setOnClickListener(mCallback4);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 3: {
-                // localize variables for thread safety
-                // viewModel
-                br.org.curitiba.ici.avaliacao.game.GameViewModel viewModel = mViewModel;
-                // viewModel != null
-                boolean viewModelJavaLangObjectNull = false;
-
-
-
-                viewModelJavaLangObjectNull = (viewModel) != (null);
-                if (viewModelJavaLangObjectNull) {
-
-
-
-
-                    viewModel.setPlayerWeapon(br.org.curitiba.ici.avaliacao.game.entities.Weapon.SCISSOR);
-                }
-                break;
-            }
             case 4: {
                 // localize variables for thread safety
                 // viewModel
@@ -173,25 +154,6 @@ public class ActivityGameBindingImpl extends ActivityGameBinding implements br.o
 
 
                     viewModel.play();
-                }
-                break;
-            }
-            case 1: {
-                // localize variables for thread safety
-                // viewModel
-                br.org.curitiba.ici.avaliacao.game.GameViewModel viewModel = mViewModel;
-                // viewModel != null
-                boolean viewModelJavaLangObjectNull = false;
-
-
-
-                viewModelJavaLangObjectNull = (viewModel) != (null);
-                if (viewModelJavaLangObjectNull) {
-
-
-
-
-                    viewModel.setPlayerWeapon(br.org.curitiba.ici.avaliacao.game.entities.Weapon.ROCK);
                 }
                 break;
             }
@@ -210,7 +172,45 @@ public class ActivityGameBindingImpl extends ActivityGameBinding implements br.o
 
 
 
-                    viewModel.setPlayerWeapon(br.org.curitiba.ici.avaliacao.game.entities.Weapon.PAPER);
+                    viewModel.setPlayerWeapon(br.org.curitiba.ici.avaliacao.game.pojo.Weapon.PAPER);
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // viewModel
+                br.org.curitiba.ici.avaliacao.game.GameViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+
+
+                    viewModel.setPlayerWeapon(br.org.curitiba.ici.avaliacao.game.pojo.Weapon.SCISSOR);
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // viewModel
+                br.org.curitiba.ici.avaliacao.game.GameViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+
+
+                    viewModel.setPlayerWeapon(br.org.curitiba.ici.avaliacao.game.pojo.Weapon.ROCK);
                 }
                 break;
             }

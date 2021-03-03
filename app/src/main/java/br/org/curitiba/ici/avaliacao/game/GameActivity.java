@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -12,12 +13,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
-import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelProviders;
 
 import br.org.curitiba.ici.avaliacao.R;
 import br.org.curitiba.ici.avaliacao.databinding.ActivityGameBinding;
-import br.org.curitiba.ici.avaliacao.game.entities.GameResult;
+import br.org.curitiba.ici.avaliacao.game.pojo.GameResult;
 import br.org.curitiba.ici.avaliacao.login.LoginActivity;
+import br.org.curitiba.ici.avaliacao.statistics.StatisticsActivity;
 
 import static br.org.curitiba.ici.avaliacao.util.Constants.LOGGED;
 import static br.org.curitiba.ici.avaliacao.util.Constants.PLAYER_NAME;
@@ -34,7 +36,7 @@ public class GameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_game);
 
-        viewModel = new ViewModelProvider(this).get(GameViewModel.class);
+        viewModel = ViewModelProviders.of(this).get(GameViewModel.class);
 
         binding.setViewModel(viewModel);
 
@@ -51,10 +53,13 @@ public class GameActivity extends AppCompatActivity {
     }
 
     private void observeViewModel() {
+
         viewModel.isShowSelectWeaponToast.observe(this, showToast -> {
             //TODO poderia usar padrão action aqui pra tirar a lógica da activity
             //por simplicidade escolhi usar esse padrão
-            if (showToast) showSelectWeaponToast();
+            if (showToast != null){
+                if (showToast) showSelectWeaponToast();
+            }
         });
 
         viewModel.playerWeapon.observe(this, playerWeapon -> {
@@ -130,7 +135,15 @@ public class GameActivity extends AppCompatActivity {
             logout();
             return true;
         }
+        if (item.getItemId() == R.id.statistics_menu_option){
+            navigateToStatistics();
+            return true;
+        }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void navigateToStatistics() {
+        startActivity(new Intent(this, StatisticsActivity.class));
     }
 
     //TODO Poderia fazer algum tipo de injeção de dependência e passar essa lógica pro Viewmodel, mas pelo tamanho do app, vou deixar aqui mesmo

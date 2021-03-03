@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\allex\\AndroidStudioProjects\\Testes\\Teste_Admissao_Android\\Avaliacao_Android_ICI\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_statistics.xml",
+        "source": "C:\\Users\\allex\\AndroidStudioProjects\\Testes\\Teste_Admissao_Android\\Avaliacao_Android_ICI\\app\\src\\main\\res\\layout\\activity_statistics.xml"
+    },
+    {
         "merged": "C:\\Users\\allex\\AndroidStudioProjects\\Testes\\Teste_Admissao_Android\\Avaliacao_Android_ICI\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_game.xml",
         "source": "C:\\Users\\allex\\AndroidStudioProjects\\Testes\\Teste_Admissao_Android\\Avaliacao_Android_ICI\\app\\src\\main\\res\\layout\\activity_game.xml"
     },

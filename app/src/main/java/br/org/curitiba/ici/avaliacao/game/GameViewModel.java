@@ -1,15 +1,22 @@
 package br.org.curitiba.ici.avaliacao.game;
 
+import android.app.Application;
+import android.util.Log;
+
+import androidx.annotation.NonNull;
+import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.ViewModel;
 
 import java.util.Objects;
 import java.util.Random;
 
-import br.org.curitiba.ici.avaliacao.game.entities.GameResult;
-import br.org.curitiba.ici.avaliacao.game.entities.Weapon;
+import br.org.curitiba.ici.avaliacao.database.GameDatabase;
+import br.org.curitiba.ici.avaliacao.game.pojo.GameData;
+import br.org.curitiba.ici.avaliacao.game.pojo.GameResult;
+import br.org.curitiba.ici.avaliacao.game.pojo.Weapon;
+import br.org.curitiba.ici.avaliacao.util.AppExecutors;
 
-public class GameViewModel extends ViewModel {
+public class GameViewModel extends AndroidViewModel {
 
     MutableLiveData<Weapon> playerWeapon = new MutableLiveData<>(null);
 
@@ -17,19 +24,29 @@ public class GameViewModel extends ViewModel {
 
     private boolean isPlaying = false;
 
-    MutableLiveData<Boolean> isShowSelectWeaponToast = new MutableLiveData<>();
+    MutableLiveData<Boolean> isShowSelectWeaponToast = new MutableLiveData<>(null);
 
     MutableLiveData<GameResult> gameResult = new MutableLiveData<>(null);
 
+    private GameData gameData;
+
+    private final GameDatabase database;
+
+    public GameViewModel(@NonNull Application application) {
+        super(application);
+
+        database = GameDatabase.getInstance(application);
+    }
+
     public void setPlayerWeapon(Weapon playerWeapon) {
         if (isPlaying) return;
-        opponentWeapon.setValue(Weapon.JACK);
-        this.playerWeapon.setValue(playerWeapon);
+
         isShowSelectWeaponToast.setValue(false);
+        this.playerWeapon.setValue(playerWeapon);
+        opponentWeapon.setValue(Weapon.JACK);
     }
 
     public void play() {
-        isPlaying = true;
         if (playerWeapon.getValue() == null) {
             isShowSelectWeaponToast.setValue(true);
             return;
@@ -37,9 +54,11 @@ public class GameViewModel extends ViewModel {
             isShowSelectWeaponToast.setValue(false);
         }
 
+        isPlaying = true;
         generateOpponentWeapon();
         calculateResult();
         isPlaying = false;
+        saveGame();
     }
 
     private void generateOpponentWeapon() {
@@ -97,6 +116,21 @@ public class GameViewModel extends ViewModel {
                 } break;
         }
 
+    }
+
+    private void saveGame() {
+        switch (Objects.requireNonNull(gameResult.getValue())){
+            case WON:
+                gameData = new GameData(1, 0, 0);
+                break;
+            case LOST:
+                gameData = new GameData(0, 1, 0);
+                break;
+            case DRAW:
+                gameData = new GameData(0, 0, 1);
+                break;
+        }
+        AppExecutors.getInstance().diskIO().execute(() -> database.gameDataDao().InsertGame(gameData));
     }
 
 }

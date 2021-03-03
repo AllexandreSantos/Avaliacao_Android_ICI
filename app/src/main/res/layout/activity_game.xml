@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <import type="br.org.curitiba.ici.avaliacao.game.entities.Weapon"/>
+        <import type="br.org.curitiba.ici.avaliacao.game.pojo.Weapon"/>
 
         <variable
             name="viewModel"
@@ -62,8 +62,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:fontFamily="@font/shojumaru"
             android:text="@string/player"
+            android:fontFamily="@font/shojumaru"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/guideline"

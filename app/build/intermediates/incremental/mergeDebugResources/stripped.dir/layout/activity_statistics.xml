@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                              
+                                                       
+                                                   
+
+    
+                 
+                            
+                                                                                  
+           
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".statistics.StatisticsActivity" android:tag="layout/activity_statistics_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/materialToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:elevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/totalGames"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/shojumaru"
+            android:text="@string/games_played"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/totalWins"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <TextView
+            android:id="@+id/totalGamesNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="TextView"
+            android:fontFamily="@font/shojumaru"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/totalWinsNumber"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <TextView
+            android:id="@+id/totalWins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/shojumaru"
+            android:text="@string/total_wins"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/totalLosses"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/totalGames" />
+
+        <TextView
+            android:id="@+id/totalWinsNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="TextView"
+            android:fontFamily="@font/shojumaru"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/totalLossesNumber"
+            app:layout_constraintEnd_toEndOf="@+id/totalGamesNumber"
+            app:layout_constraintStart_toStartOf="@+id/totalGamesNumber"
+            app:layout_constraintTop_toBottomOf="@+id/totalGamesNumber" />
+
+        <TextView
+            android:id="@+id/totalLosses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/shojumaru"
+            android:text="@string/total_losses"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/totalDraws"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/totalWins" />
+
+        <TextView
+            android:id="@+id/totalLossesNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="TextView"
+            android:fontFamily="@font/shojumaru"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/totalDrawsNumber"
+            app:layout_constraintEnd_toEndOf="@+id/totalWinsNumber"
+            app:layout_constraintStart_toStartOf="@+id/totalWinsNumber"
+            app:layout_constraintTop_toBottomOf="@+id/totalWinsNumber" />
+
+        <TextView
+            android:id="@+id/totalDraws"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/shojumaru"
+            android:text="@string/total_draws"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/winRatio"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/totalLosses" />
+
+        <TextView
+            android:id="@+id/totalDrawsNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="TextView"
+            android:fontFamily="@font/shojumaru"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/winRatioNumber"
+            app:layout_constraintEnd_toEndOf="@+id/totalLossesNumber"
+            app:layout_constraintStart_toStartOf="@+id/totalLossesNumber"
+            app:layout_constraintTop_toBottomOf="@+id/totalLossesNumber" />
+
+        <TextView
+            android:id="@+id/winRatio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/shojumaru"
+            android:text="@string/win_ratio"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/wipeData"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/totalDraws" />
+
+        <TextView
+            android:id="@+id/winRatioNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="TextView"
+            android:fontFamily="@font/shojumaru"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/wipeData"
+            app:layout_constraintEnd_toEndOf="@+id/totalDrawsNumber"
+            app:layout_constraintStart_toStartOf="@+id/totalDrawsNumber"
+            app:layout_constraintTop_toBottomOf="@+id/totalDrawsNumber" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.70" />
+
+        <Button
+            android:id="@+id/wipeData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/wipe_data"
+            android:tag="binding_1"                        
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+         
