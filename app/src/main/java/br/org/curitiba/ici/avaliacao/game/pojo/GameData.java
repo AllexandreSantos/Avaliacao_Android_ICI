@@ -12,23 +12,6 @@ public class GameData {
     private int victory;
     private int loss;
     private int draw;
-
-    public void setVictory(int victory) {
-        this.victory = victory;
-    }
-
-    public void setLoss(int loss) {
-        this.loss = loss;
-    }
-
-    public void setDraw(int draw) {
-        this.draw = draw;
-    }
-
-    public void setGamesPlayed(int gamesPlayed) {
-        this.gamesPlayed = gamesPlayed;
-    }
-
     private int gamesPlayed;
 
     @Ignore
@@ -65,6 +48,22 @@ public class GameData {
 
     public int getGamesPlayed() {
         return gamesPlayed;
+    }
+
+    public void setVictory(int victory) {
+        this.victory = victory;
+    }
+
+    public void setLoss(int loss) {
+        this.loss = loss;
+    }
+
+    public void setDraw(int draw) {
+        this.draw = draw;
+    }
+
+    public void setGamesPlayed(int gamesPlayed) {
+        this.gamesPlayed = gamesPlayed;
     }
 
 }
