@@ -29,7 +29,6 @@ public class GameActivity extends AppCompatActivity {
 
     ActivityGameBinding binding;
     GameViewModel viewModel;
-    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +39,6 @@ public class GameActivity extends AppCompatActivity {
 
         binding.setViewModel(viewModel);
 
-        sharedPreferences = this.getSharedPreferences(SHARED_PREFS_KEY, Context.MODE_PRIVATE);
-
         initViews();
 
         observeViewModel();
@@ -49,14 +46,12 @@ public class GameActivity extends AppCompatActivity {
 
     private void initViews() {
         setSupportActionBar(binding.materialToolbar);
-        binding.playerTextView.setText(sharedPreferences.getString(PLAYER_NAME, getString(R.string.player)));
+        binding.playerTextView.setText(viewModel.getPlayerName());
     }
 
     private void observeViewModel() {
 
         viewModel.isShowSelectWeaponToast.observe(this, showToast -> {
-            //TODO poderia usar padrão action aqui pra tirar a lógica da activity
-            //por simplicidade escolhi usar esse padrão
             if (showToast != null){
                 if (showToast) showSelectWeaponToast();
             }
@@ -114,7 +109,8 @@ public class GameActivity extends AppCompatActivity {
         builder.setMessage(gameResult.getValue())
                 .setTitle(R.string.result);
 
-        builder.setPositiveButton(R.string.ok, (dialog, id) -> {
+        builder.setPositiveButton(R.string.new_game, (dialog, id) -> {
+            binding.opponentImage.setImageResource(R.drawable.samurai);
         });
 
        builder.create().show();
@@ -146,12 +142,8 @@ public class GameActivity extends AppCompatActivity {
         startActivity(new Intent(this, StatisticsActivity.class));
     }
 
-    //TODO Poderia fazer algum tipo de injeção de dependência e passar essa lógica pro Viewmodel, mas pelo tamanho do app, vou deixar aqui mesmo
-    //Mesmo raciocínio vale para outras classes como LoginActivity e SlpashScreen
     private void logout() {
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putBoolean(LOGGED, false);
-        editor.apply();
+        viewModel.logout();
         startActivity(new Intent(this, LoginActivity.class));
         finish();
     }

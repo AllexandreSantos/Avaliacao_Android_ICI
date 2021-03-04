@@ -1,6 +1,8 @@
 package br.org.curitiba.ici.avaliacao.game;
 
 import android.app.Application;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
@@ -10,11 +12,16 @@ import androidx.lifecycle.MutableLiveData;
 import java.util.Objects;
 import java.util.Random;
 
+import br.org.curitiba.ici.avaliacao.R;
 import br.org.curitiba.ici.avaliacao.database.GameDatabase;
 import br.org.curitiba.ici.avaliacao.game.pojo.GameData;
 import br.org.curitiba.ici.avaliacao.game.pojo.GameResult;
 import br.org.curitiba.ici.avaliacao.game.pojo.Weapon;
 import br.org.curitiba.ici.avaliacao.util.AppExecutors;
+
+import static br.org.curitiba.ici.avaliacao.util.Constants.LOGGED;
+import static br.org.curitiba.ici.avaliacao.util.Constants.PLAYER_NAME;
+import static br.org.curitiba.ici.avaliacao.util.Constants.SHARED_PREFS_KEY;
 
 public class GameViewModel extends AndroidViewModel {
 
@@ -32,10 +39,24 @@ public class GameViewModel extends AndroidViewModel {
 
     private final GameDatabase database;
 
+    SharedPreferences sharedPreferences;
+
     public GameViewModel(@NonNull Application application) {
         super(application);
 
+        sharedPreferences = application.getSharedPreferences(SHARED_PREFS_KEY, Context.MODE_PRIVATE);
+
         database = GameDatabase.getInstance(application);
+    }
+
+    public void logout(){
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean(LOGGED, false);
+        editor.apply();
+    }
+
+    public String getPlayerName(){
+        return sharedPreferences.getString(PLAYER_NAME, getApplication().getString(R.string.player));
     }
 
     public void setPlayerWeapon(Weapon playerWeapon) {

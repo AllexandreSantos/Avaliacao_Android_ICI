@@ -24,4 +24,5 @@
     <string name="total_wins">Vitórias totais:</string>
     <string name="games_played">Partidas disputadas:</string>
     <string name="wipe_data">Apagar dados</string>
+    <string name="new_game">Nova Partida</string>
 </resources>

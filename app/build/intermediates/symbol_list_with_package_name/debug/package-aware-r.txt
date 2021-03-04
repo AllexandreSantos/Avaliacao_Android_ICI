@@ -2384,6 +2384,7 @@ string mtrl_picker_toggle_to_year_selection
 string name
 string name_is_mandatory
 string name_nickname
+string new_game
 string ok
 string opponent
 string paper
