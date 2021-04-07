@@ -1,2 +1,2 @@
-# Avaliacao_Android_ICI
-A simple Jokenpo game for a job application
+# Job Application Test
+A simple Jokenpo game coded in JAVA
