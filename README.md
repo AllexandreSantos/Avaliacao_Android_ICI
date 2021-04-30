@@ -1,2 +1,2 @@
 # Job Application Test
-A simple Jokenpo game coded in JAVA
+A simple Rock Paper Scissors game coded in JAVA
